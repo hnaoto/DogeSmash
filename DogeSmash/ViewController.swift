@@ -24,6 +24,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+    
+    
+    
 
 
     @IBAction func okTapped(sender: AnyObject) {
@@ -41,22 +49,7 @@ class ViewController: UIViewController {
    
     }
     
-    
-    @IBAction func notificationTapped(sender: AnyObject) {
 
-        
-        let date = NSDate()
-        let dateComp = NSDateComponents()
-        dateComp.second = 5
-        let cal = NSCalendar.currentCalendar()
-        let fireDate:NSDate = cal.dateByAddingComponents(dateComp, toDate: date, options: NSCalendarOptions())!
-        let notification:UILocalNotification = UILocalNotification()
-        notification.alertBody = "foo"
-        notification.fireDate = fireDate
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-    
-        }
-    
     
     
     func is_prime(n: Int) -> Bool{

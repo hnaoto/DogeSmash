@@ -486,6 +486,7 @@
 				376D86241BD0114C00476CD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		376D86251BD0114C00476CD5 /* Build configuration list for PBXNativeTarget "DogeSmashTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +495,7 @@
 				376D86271BD0114C00476CD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		376D86281BD0114C00476CD5 /* Build configuration list for PBXNativeTarget "DogeSmashUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +504,7 @@
 				376D862A1BD0114C00476CD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -37,14 +37,6 @@
                                 <rect key="frame" x="15" y="173" width="305" height="305"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ztj-fG-Ib4">
-                                <rect key="frame" x="50" y="20" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Notification"/>
-                                <connections>
-                                    <action selector="notificationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7IH-1X-o9x"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

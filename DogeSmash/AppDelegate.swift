@@ -12,16 +12,26 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     //? (optional) initialized without giving a value: ? means it could be null, nil
     var window: UIWindow?
-   
     //conncted with objective-c runtime
     //launchOptions: similar to intent
-
-    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        
+        
+        let settings = UIUserNotificationSettings(forTypes: .Alert,
+            categories: nil)
+        
+        application.registerUserNotificationSettings(settings)
+        
+        return true
+        
+        
+        /**
         // Override point for customization after application launch.
         let notifSettings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes:[.Alert, .Badge, .Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notifSettings)
         return true
+        **/
     }
     
     
@@ -47,6 +57,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+    func application(application: UIApplication,
+        didRegisterUserNotificationSettings
+        notificationSettings: UIUserNotificationSettings){
+            
+            let notification = UILocalNotification()
+            
+            /* Time and timezone settings */
+            
+            notification.fireDate = NSDate(timeIntervalSinceNow: 5)
+            notification.timeZone = NSCalendar.currentCalendar().timeZone
+            
+            notification.alertBody = "I will miss you. -Doge"
+            
+            /* Action settings */
+            notification.hasAction = true
+            notification.alertAction = "View"
+            
+            /* Badge settings */
+            notification.applicationIconBadgeNumber++
+            
+            /* Additional information, user info */
+            notification.userInfo = [
+                "Key 1" : "Value 1",
+                "Key 2" : "Value 2"
+            ]
+            
+            /* Schedule the notification */
+            application.scheduleLocalNotification(notification)
+            
+    }
+    
+    
+    
 
 
 }
